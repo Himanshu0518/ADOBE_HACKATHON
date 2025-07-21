@@ -5,9 +5,8 @@ import joblib
 import os
 import pandas as pd
 import fitz
-import json
 from src.config import Config
-from src.utils import compute_numbering_level,convert_types,is_likely_noise,is_invalid_heading
+from src.utils import compute_numbering_level,is_likely_noise,is_invalid_heading
 
 class PDFProcessor:
     """
@@ -92,9 +91,8 @@ class PDFProcessor:
 
                     pred = self.clf.predict(features)[0]
                     label = self.label_map.get(pred, "Unlabeled")
-                    
-                    if label != "Unlabeled" and not is_likely_noise(clean_text) and not is_invalid_heading(clean_text):
 
+                    if label != "Unlabeled" and not is_likely_noise(clean_text):
                         lines.append({
                             "level": label,
                             "text": clean_text,
@@ -118,7 +116,3 @@ class PDFProcessor:
             "outline": outline
         }
         return result
-        # with open(output_path, "w", encoding="utf-8") as f:
-        #     json.dump(convert_types(result), f, indent=2, ensure_ascii=False)
-
-        # print(f"✅ Extracted outline saved to {output_path}")

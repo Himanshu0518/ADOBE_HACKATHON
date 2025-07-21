@@ -2,6 +2,11 @@
   "title": "Attention Is All You Need",
   "outline": [
     {
+      "level": "H1",
+      "text": "scholarly works.",
+      "page": 1
+    },
+    {
       "level": "H2",
       "text": "Ashish Vaswani∗",
       "page": 1
@@ -37,6 +42,46 @@
       "page": 1
     },
     {
+      "level": "H1",
+      "text": "Abstract",
+      "page": 1
+    },
+    {
+      "level": "H1",
+      "text": "Introduction",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "architectures [38, 24, 15].",
+      "page": 2
+    },
+    {
+      "level": "H1",
+      "text": "Background",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "described in section 3.2.",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "language modeling tasks [34].",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "Model Architecture",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "respectively.",
+      "page": 3
+    },
+    {
       "level": "H2",
       "text": "Encoder and Decoder Stacks",
       "page": 3
@@ -45,6 +90,61 @@
       "level": "H2",
       "text": "Encoder:",
       "page": 3
+    },
+    {
+      "level": "H2",
+      "text": "Attention",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "Scaled Dot-Product Attention",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "Multi-Head Attention",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "Scaled Dot-Product Attention",
+      "page": 4
+    },
+    {
+      "level": "H2",
+      "text": "values.",
+      "page": 4
+    },
+    {
+      "level": "H1",
+      "text": "√dk",
+      "page": 4
+    },
+    {
+      "level": "H2",
+      "text": "(1)",
+      "page": 4
+    },
+    {
+      "level": "H2",
+      "text": "matrix multiplication code.",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "Multi-Head Attention",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "where head i = Attention( QW Q",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "i, KWK",
+      "page": 5
     },
     {
       "level": "H3",
@@ -62,14 +162,34 @@
       "page": 5
     },
     {
+      "level": "H3",
+      "text": "[38, 2, 9].",
+      "page": 5
+    },
+    {
+      "level": "H2",
+      "text": "encoder.",
+      "page": 5
+    },
+    {
       "level": "H2",
       "text": "Position-wise Feed-Forward Networks",
       "page": 5
     },
     {
       "level": "H2",
+      "text": "(2)",
+      "page": 5
+    },
+    {
+      "level": "H2",
       "text": "Embeddings and Softmax",
       "page": 5
+    },
+    {
+      "level": "H2",
+      "text": "Layer Type",
+      "page": 6
     },
     {
       "level": "H2",
@@ -83,7 +203,97 @@
     },
     {
       "level": "H2",
+      "text": "Self-Attention",
+      "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "O(1)",
+      "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "O(1)",
+      "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "Recurrent",
+      "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "O ( n · d 2 )",
+      "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "Convolutional",
+      "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "O(1)",
+      "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "Self-Attention (restricted)",
+      "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "O(1)",
+      "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "Positional Encoding",
+      "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "learned and fixed [9].",
+      "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "PEpos.",
+      "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "during training.",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "Why Self-Attention",
+      "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "consider three desiderata.",
+      "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "different layer types.",
+      "page": 6
+    },
+    {
+      "level": "H1",
+      "text": "Training",
+      "page": 7
+    },
+    {
+      "level": "H2",
       "text": "Training Data and Batching",
+      "page": 7
+    },
+    {
+      "level": "H2",
+      "text": "target tokens.",
       "page": 7
     },
     {
@@ -93,12 +303,57 @@
     },
     {
       "level": "H2",
+      "text": "(3.5 days).",
+      "page": 7
+    },
+    {
+      "level": "H2",
+      "text": "Optimizer",
+      "page": 7
+    },
+    {
+      "level": "H2",
       "text": "lrate = d − 0 . 5",
       "page": 7
     },
     {
+      "level": "H2",
+      "text": "(3)",
+      "page": 7
+    },
+    {
+      "level": "H2",
+      "text": "Regularization",
+      "page": 7
+    },
+    {
+      "level": "H2",
+      "text": "Model",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "BLEU",
+      "page": 8
+    },
+    {
       "level": "H3",
       "text": "Training Cost (FLOPs)",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "EN-FR",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "EN-FR",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "ByteNet [18]",
       "page": 8
     },
     {
@@ -108,7 +363,52 @@
     },
     {
       "level": "H3",
+      "text": "1 . 0 · 10 20",
+      "page": 8
+    },
+    {
+      "level": "H3",
       "text": "GNMT + RL [38]",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "2 . 3 · 10 19",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "1 . 4 · 10 20",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "ConvS2S [9]",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "9 . 6 · 10 18",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "1 . 5 · 10 20",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "MoE [32]",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "2 . 0 · 10 19",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "1 . 2 · 10 20",
       "page": 8
     },
     {
@@ -118,7 +418,22 @@
     },
     {
       "level": "H3",
+      "text": "8 . 0 · 10 20",
+      "page": 8
+    },
+    {
+      "level": "H3",
       "text": "GNMT + RL Ensemble [38]",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "1 . 8 · 10 20",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "1 . 1 · 10 21",
       "page": 8
     },
     {
@@ -128,7 +443,37 @@
     },
     {
       "level": "H3",
+      "text": "7 . 7 · 10 19",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "1 . 2 · 10 21",
+      "page": 8
+    },
+    {
+      "level": "H3",
       "text": "Transformer (base model)",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "3 . 3 · 10 18",
+      "page": 8
+    },
+    {
+      "level": "H2",
+      "text": "Transformer (big)",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "2 . 3 · 10 19",
+      "page": 8
+    },
+    {
+      "level": "H2",
+      "text": "Residual Dropout",
       "page": 8
     },
     {
@@ -138,8 +483,83 @@
     },
     {
       "level": "H2",
+      "text": "Label Smoothing",
+      "page": 8
+    },
+    {
+      "level": "H1",
+      "text": "Results",
+      "page": 8
+    },
+    {
+      "level": "H2",
+      "text": "Machine Translation",
+      "page": 8
+    },
+    {
+      "level": "H2",
+      "text": "the competitive models.",
+      "page": 8
+    },
+    {
+      "level": "H2",
+      "text": "Model Variations",
+      "page": 8
+    },
+    {
+      "level": "H2",
+      "text": "per-word perplexities.",
+      "page": 9
+    },
+    {
+      "level": "H1",
+      "text": "Pdrop",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "PPL",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "BLEU",
+      "page": 9
+    },
+    {
+      "level": "H2",
+      "text": "base",
+      "page": 9
+    },
+    {
+      "level": "H2",
+      "text": "100K",
+      "page": 9
+    },
+    {
+      "level": "H2",
+      "text": "(B)",
+      "page": 9
+    },
+    {
+      "level": "H2",
+      "text": "big",
+      "page": 9
+    },
+    {
+      "level": "H2",
+      "text": "300K",
+      "page": 9
+    },
+    {
+      "level": "H2",
       "text": "English Constituency Parsing",
       "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "of WSJ)",
+      "page": 10
     },
     {
       "level": "H3",
@@ -232,8 +652,63 @@
       "page": 10
     },
     {
+      "level": "H3",
+      "text": "Recurrent Neural Network Grammar [8].",
+      "page": 10
+    },
+    {
+      "level": "H1",
+      "text": "Conclusion",
+      "page": 10
+    },
+    {
+      "level": "H2",
+      "text": "multi-headed self-attention.",
+      "page": 10
+    },
+    {
+      "level": "H2",
+      "text": "Acknowledgements",
+      "page": 10
+    },
+    {
+      "level": "H2",
+      "text": "comments, corrections and inspiration.",
+      "page": 10
+    },
+    {
+      "level": "H1",
+      "text": "References",
+      "page": 10
+    },
+    {
+      "level": "H2",
+      "text": "machine translation architectures.CoRR, abs/1703.03906, 2017.",
+      "page": 10
+    },
+    {
+      "level": "H2",
+      "text": "machine translation.CoRR, abs/1406.1078, 2014.",
+      "page": 11
+    },
+    {
       "level": "H2",
       "text": "network grammars. InProc. of NAACL, 2016.",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "[10]Alex Graves.",
+      "page": 11
+    },
+    {
+      "level": "H2",
+      "text": "Recognition, pages 770–778, 2016.",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "9(8):1735–1780, 1997.",
       "page": 11
     },
     {
@@ -243,8 +718,133 @@
     },
     {
       "level": "H2",
+      "text": "Information Processing Systems, (NIPS), 2016.",
+      "page": 11
+    },
+    {
+      "level": "H2",
+      "text": "on Learning Representations (ICLR), 2016.",
+      "page": 11
+    },
+    {
+      "level": "H2",
+      "text": "InInternational Conference on Learning Representations, 2017.",
+      "page": 11
+    },
+    {
+      "level": "H2",
+      "text": "pages 152–159. ACL, June 2006.",
+      "page": 12
+    },
+    {
+      "level": "H2",
+      "text": "Learning Research, 15(1):1929–1958, 2014.",
+      "page": 12
+    },
+    {
+      "level": "H2",
+      "text": "Inc., 2015.",
+      "page": 12
+    },
+    {
+      "level": "H2",
       "text": "Advances in Neural Information Processing Systems, 2015.",
       "page": 12
+    },
+    {
+      "level": "H2",
+      "text": "Attention Visualizations",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "<EOS>",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "<EOS>",
+      "page": 13
+    },
+    {
+      "level": "H2",
+      "text": "Law",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "<EOS>",
+      "page": 14
+    },
+    {
+      "level": "H2",
+      "text": "Law",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "<EOS>",
+      "page": 14
+    },
+    {
+      "level": "H2",
+      "text": "Law",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "<EOS>",
+      "page": 14
+    },
+    {
+      "level": "H2",
+      "text": "Law",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "<EOS>",
+      "page": 14
+    },
+    {
+      "level": "H2",
+      "text": "Law",
+      "page": 15
+    },
+    {
+      "level": "H3",
+      "text": "<EOS>",
+      "page": 15
+    },
+    {
+      "level": "H2",
+      "text": "Law",
+      "page": 15
+    },
+    {
+      "level": "H3",
+      "text": "<EOS>",
+      "page": 15
+    },
+    {
+      "level": "H2",
+      "text": "Law",
+      "page": 15
+    },
+    {
+      "level": "H3",
+      "text": "<EOS>",
+      "page": 15
+    },
+    {
+      "level": "H2",
+      "text": "Law",
+      "page": 15
+    },
+    {
+      "level": "H3",
+      "text": "<EOS>",
+      "page": 15
     }
   ]
 }

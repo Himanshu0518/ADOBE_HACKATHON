@@ -3,7 +3,7 @@
 import json
 import os
 from src.config import Config
-from src.utils import load_stopwords, convert_types
+from src.utils import  convert_types
 from src.processor import PDFProcessor
 
 def main():
@@ -17,7 +17,7 @@ def main():
 
     # Load resources and initialize processor
     try:
-       # stopwords_set = load_stopwords(Config.STOPWORDS_LANGS)
+       
         pdf_processor = PDFProcessor(Config.MODEL_PATH, Config.LABEL_MAP)
     except FileNotFoundError as e:
         print(f"Error: {e}")
