@@ -1,0 +1,250 @@
+{
+  "title": "Attention Is All You Need",
+  "outline": [
+    {
+      "level": "H2",
+      "text": "Ashish Vaswani∗",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "Noam Shazeer∗",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "Niki Parmar∗",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "Jakob Uszkoreit∗",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "Llion Jones∗",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "Aidan N. Gomez∗†",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "Illia Polosukhin∗‡",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "Encoder and Decoder Stacks",
+      "page": 3
+    },
+    {
+      "level": "H2",
+      "text": "Encoder:",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "i, V WV",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Applications of Attention in our Model",
+      "page": 5
+    },
+    {
+      "level": "H2",
+      "text": "The Transformer uses multi-head attention in three different ways:",
+      "page": 5
+    },
+    {
+      "level": "H2",
+      "text": "Position-wise Feed-Forward Networks",
+      "page": 5
+    },
+    {
+      "level": "H2",
+      "text": "Embeddings and Softmax",
+      "page": 5
+    },
+    {
+      "level": "H2",
+      "text": "Complexity per Layer",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "Maximum Path Length",
+      "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "Training Data and Batching",
+      "page": 7
+    },
+    {
+      "level": "H2",
+      "text": "Hardware and Schedule",
+      "page": 7
+    },
+    {
+      "level": "H2",
+      "text": "lrate = d − 0 . 5",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "Training Cost (FLOPs)",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "Deep-Att + PosUnk [39]",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "GNMT + RL [38]",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "Deep-Att + PosUnk Ensemble [39]",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "GNMT + RL Ensemble [38]",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "ConvS2S Ensemble [9]",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "Transformer (base model)",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "P drop = 0 . 1 .",
+      "page": 8
+    },
+    {
+      "level": "H2",
+      "text": "English Constituency Parsing",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "WSJ 23 F1",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "Vinyals & Kaiser el al. (2014) [37]",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "WSJ only, discriminative",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "Petrov et al. (2006) [29]",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "WSJ only, discriminative",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "Zhu et al. (2013) [40]",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "WSJ only, discriminative",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "Dyer et al. (2016) [8]",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "WSJ only, discriminative",
+      "page": 10
+    },
+    {
+      "level": "H2",
+      "text": "Transformer (4 layers)",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "WSJ only, discriminative",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "Zhu et al. (2013) [40]",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "Huang & Harper (2009) [14]",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "McClosky et al. (2006) [26]",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "Vinyals & Kaiser el al. (2014) [37]",
+      "page": 10
+    },
+    {
+      "level": "H2",
+      "text": "Transformer (4 layers)",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "Luong et al. (2015) [23]",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "Dyer et al. (2016) [8]",
+      "page": 10
+    },
+    {
+      "level": "H2",
+      "text": "network grammars. InProc. of NAACL, 2016.",
+      "page": 11
+    },
+    {
+      "level": "H2",
+      "text": "Language Processing, pages 832–841. ACL, August 2009.",
+      "page": 11
+    },
+    {
+      "level": "H2",
+      "text": "Advances in Neural Information Processing Systems, 2015.",
+      "page": 12
+    }
+  ]
+}

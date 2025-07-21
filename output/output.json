@@ -1,0 +1,70 @@
+{
+  "title": "Attention Is All You Need",
+  "outline": [
+    {
+      "level": "H2",
+      "text": "Encoder and Decoder Stacks",
+      "page": 3
+    },
+    {
+      "level": "H2",
+      "text": "Encoder:",
+      "page": 3
+    },
+    {
+      "level": "H2",
+      "text": "Position-wise Feed-Forward Networks",
+      "page": 5
+    },
+    {
+      "level": "H2",
+      "text": "Embeddings and Softmax",
+      "page": 5
+    },
+    {
+      "level": "H2",
+      "text": "Training Data and Batching",
+      "page": 7
+    },
+    {
+      "level": "H2",
+      "text": "Hardware and Schedule",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "Deep-Att + PosUnk [39]",
+      "page": 8
+    },
+    {
+      "level": "H2",
+      "text": "GNMT + RL [38]",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "Deep-Att + PosUnk Ensemble [39]",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "GNMT + RL Ensemble [38]",
+      "page": 8
+    },
+    {
+      "level": "H2",
+      "text": "ConvS2S Ensemble [9]",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "Transformer (base model)",
+      "page": 8
+    },
+    {
+      "level": "H2",
+      "text": "English Constituency Parsing",
+      "page": 9
+    }
+  ]
+}
