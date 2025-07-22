@@ -238,7 +238,17 @@
     },
     {
       "level": "H2",
+      "text": "machine translation architectures.CoRR, abs/1703.03906, 2017.",
+      "page": 10
+    },
+    {
+      "level": "H2",
       "text": "machine translation.CoRR, abs/1406.1078, 2014.",
+      "page": 11
+    },
+    {
+      "level": "H2",
+      "text": "[10]Alex Graves.",
       "page": 11
     },
     {
