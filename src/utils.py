@@ -41,7 +41,7 @@ def convert_types(obj):
 
 def is_likely_noise(text):
     text = text.strip()
-  #  text_lower = text.lower()
+    text_lower = text.lower()
 
     if not text or len(text) < 3:
         return True
@@ -52,67 +52,28 @@ def is_likely_noise(text):
     if re.match(r"^\[\d+\]$", text):
         return True
 
-    # Author name-like pattern
-    # if re.search(r'^\w+\s\w+(\s[A-Z]\.)?(\*|†|‡)?$', text) and len(text.split()) < 5:
-    #     return True
-
-    # # Reference noise
-    # if re.search(r'\bfigure\b|\btable\b|\breference\b|\bappendix\b', text_lower):
-    #     return True
-    # if any(w in text_lower for w in ['arxiv', 'doi', '@', '.com', '.edu', 'university', 'institute', 'gmail', 'google', 'brain', 'proceedings', 'journal', 'conference']):
-    #     return True
     
-    # # Math-like patterns
-    # if re.search(r'^((\(?\w+\)?\s*[\+\-\*/=<>≤≥]\s*\w+\(?\w+\)?)|(\w+\s*=\s*\w+[\+\-\*/].*?))$', text.replace(" ", "")):
-    #     return True
 
-    # # Too short and not clearly a heading
-    # if len(text.split()) <= 2 and not text.istitle() and not text.isupper():
-    #     return True
-
-    # # ✅ Stopword-based check using preloaded global stopwords
-    # words = re.findall(r'\w+', text_lower)
-    # if words:
-    #     stop_count = sum(1 for w in words if w in all_stopwords)
-    #     if stop_count / len(words) > 0.8:
-    #         return True
-
-    # return False
-    return False
-
-def is_invalid_heading(text):
-    """
-    Filter headings that are likely noise, math, or misclassified junk.
-    """
-    return False
-    # text = text.strip().lower()
-
-    # if len(text) < 3:
-    #     return True
-
-    # if text.startswith(("{", "[", "(")):
-    #     return True
+    # Reference noise
+    if re.search(r'\bfigure\b|\btable\b|\breference\b|\bappendix\b', text_lower):
+        return True
+    if any(w in text_lower for w in ['arxiv', 'doi', '@', '.com', '.edu', 'university', 'institute', 'gmail', 'google', 'brain', 'proceedings', 'journal', 'conference']):
+        return True
     
-    # if text in {"<eos>", "√dk"}:
-    #     return True
+    # Math-like patterns
+    if re.search(r'^((\(?\w+\)?\s*[\+\-\*/=<>≤≥]\s*\w+\(?\w+\)?)|(\w+\s*=\s*\w+[\+\-\*/].*?))$', text.replace(" ", "")):
+        return True
 
-    # # Mostly numbers/symbols
-    # if re.fullmatch(r"[\d\.\-\–—=~_\[\]()+\-*/^%\\.,\s]+", text) and sum(c.isalpha() for c in text) < 2:
-    #     return True
+    # Too short and not clearly a heading
+    if len(text.split()) <= 2 and not text.istitle() and not text.isupper():
+        return True
 
-    # if re.match(r"^[a-zA-Z]{1,2}$", text):
-    #     return True
+    # ✅ Stopword-based check using preloaded global stopwords
+    words = re.findall(r'\w+', text_lower)
+    if words:
+        stop_count = sum(1 for w in words if w in all_stopwords)
+        if stop_count / len(words) > 0.8:
+            return True
 
-    # if re.match(r"^[a-z0-9\[\]()+=/*^%\\.-]+$", text):
-    #     return True
-
-    # if sum(c.isalpha() for c in text) < 4 and len(text.split()) > 1:
-    #     return True
-
-    # if text.endswith(".") and len(text.split()) < 6:
-    #     return True
-
-    # if re.fullmatch(r"[\d\s\W]+", text) and sum(c.isalpha() for c in text) == 0:
-    #     return True
-
-    # return False
+    return False
+    

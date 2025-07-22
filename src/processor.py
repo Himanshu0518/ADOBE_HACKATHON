@@ -6,7 +6,7 @@ import os
 import pandas as pd
 import fitz
 from src.config import Config
-from src.utils import compute_numbering_level,is_likely_noise,is_invalid_heading
+from src.utils import compute_numbering_level,is_likely_noise
 
 class PDFProcessor:
     """
@@ -91,13 +91,13 @@ class PDFProcessor:
 
                     pred = self.clf.predict(features)[0]
                     label = self.label_map.get(pred, "Unlabeled")
-
-                    if label != "Unlabeled" and not is_likely_noise(clean_text):
-                        lines.append({
+                    curr_res = {
                             "level": label,
                             "text": clean_text,
                             "page": page_num + 1
-                        })
+                        }
+                    if label != "Unlabeled" and not is_likely_noise(clean_text)  and curr_res not in lines:
+                        lines.append(curr_res)
 
         title = ""
         for item in lines:
@@ -115,4 +115,5 @@ class PDFProcessor:
             "title": title,
             "outline": outline
         }
+
         return result
