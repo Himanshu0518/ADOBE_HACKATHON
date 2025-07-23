@@ -42,3 +42,4 @@ Thumbs.db
 
 # Git metadata (for submodules or manual .git dir copying)
 .git/
+WindowsPowerShell/
