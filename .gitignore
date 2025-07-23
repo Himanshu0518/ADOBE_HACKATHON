@@ -1,0 +1,44 @@
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environments
+venv/
+env/
+.hvenv/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# NLTK data (if accidentally downloaded locally)
+nltk_data/
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+
+
+
+# Python packaging artifacts
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# System/OS files
+.DS_Store
+Thumbs.db
+
+# IDE/editor settings
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+
+
+# Git metadata (for submodules or manual .git dir copying)
+.git/
