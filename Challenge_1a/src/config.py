@@ -19,7 +19,7 @@ class Config:
 
     # Model and Labeling
     # Use the PROJECT_ROOT variable here
-    MODEL_PATH = os.path.join(PROJECT_ROOT, "Challenge_1a" ,"hackathon_model.joblib")
+    MODEL_PATH = os.path.join(PROJECT_ROOT ,"hackathon_model.joblib")
     LABEL_MAP = {
         np.int64(0): 'Unlabeled', # Body texts
         np.int64(1): 'H1',
@@ -40,10 +40,9 @@ class Config:
 
     # Application Paths
     # Use the PROJECT_ROOT variable here
-    DEFAULT_PDF_INPUT = os.path.join(PROJECT_ROOT,"Challenge_1a" , "input","attention_all_you_need.pdf")
-    DEFAULT_JSON_OUTPUT = os.path.join(PROJECT_ROOT,"Challenge_1a" ,"output", "output.json")
+    DEFAULT_PDF_INPUT = os.path.join(PROJECT_ROOT , "input","attention_all_you_need.pdf")
+    DEFAULT_JSON_OUTPUT = os.path.join(PROJECT_ROOT ,"output", "output.json")
     
     # These print statements will now work correctly
     print(f"Default PDF input path: {DEFAULT_PDF_INPUT}")
     print(f"Default JSON output path: {DEFAULT_JSON_OUTPUT}")
-    
