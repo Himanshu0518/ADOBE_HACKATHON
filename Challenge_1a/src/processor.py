@@ -4,9 +4,8 @@ import fitz
 import joblib
 import os
 import pandas as pd
-import fitz
 from src.config import Config
-from src.utils import compute_numbering_level,is_likely_noise
+from src.utils import compute_numbering_level, is_likely_noise
 
 class PDFProcessor:
     """
@@ -20,17 +19,18 @@ class PDFProcessor:
             raise FileNotFoundError(f"Model file not found at: {model_path}")
         self.clf = joblib.load(model_path)
         self.label_map = label_map
-        
 
-    def extract_headings(self,pdf_path):
+    def extract_headings(self, pdf_path):
         doc = fitz.open(pdf_path)
         lines = []
+        largest_font_line = {"text": "", "size": 0.0, "page": 1, "is_bold": False, "is_centered": False}
 
         for page_num, page in enumerate(doc):
             blocks = page.get_text("dict")["blocks"]
             for b in blocks:
                 if "lines" not in b:
                     continue
+
                 for l in b["lines"]:
                     spans = l["spans"]
                     if not spans:
@@ -41,7 +41,7 @@ class PDFProcessor:
                     prev_end = 0
                     fonts = []
                     word_count = 0
-                    gap_threshold = 30
+                    gap_threshold = 10
 
                     if len(spans) <= 4:
                         for span in spans:
@@ -91,13 +91,29 @@ class PDFProcessor:
 
                     pred = self.clf.predict(features)[0]
                     label = self.label_map.get(pred, "Unlabeled")
+
                     curr_res = {
-                            "level": label,
+                        "level": label,
+                        "text": clean_text,
+                        "page": page_num + 1
+                    }
+
+                    if (label != "Unlabeled" or avg_font_size > 12) and not is_likely_noise(clean_text) and curr_res not in lines:
+                        if label != "Unlabeled":
+                            lines.append(curr_res)
+
+                    # Enhanced fallback detection for title line
+                    if page_num == 0 and (
+                        avg_font_size > largest_font_line["size"] or
+                        (avg_font_size == largest_font_line["size"] and is_centered and is_bold)
+                    ) and len(clean_text.split()) >= 3:
+                        largest_font_line = {
                             "text": clean_text,
-                            "page": page_num + 1
+                            "size": avg_font_size,
+                            "page": 1,
+                            "is_bold": is_bold,
+                            "is_centered": is_centered
                         }
-                    if label != "Unlabeled" and not is_likely_noise(clean_text)  and curr_res not in lines:
-                        lines.append(curr_res)
 
         title = ""
         for item in lines:
@@ -105,11 +121,22 @@ class PDFProcessor:
                 title = item["text"]
                 break
 
-        outline = [entry for entry in lines if entry["level"] != "TITLE"]
+        outline = [entry for entry in lines if entry["level"] != "TITLE" and entry["level"] != "Unlabeled"]
 
-        if not title and not outline:
-            print("⚠️ No valid headings or title found. Output not saved.")
-            return
+        # Fallback: use largest font line from page 1 if no title found
+        if not title and largest_font_line["text"]:
+            title = largest_font_line["text"]
+
+        # Secondary fallback: use first H1
+        if not title:
+            for entry in outline:
+                if entry["level"].upper() == "H1":
+                    title = entry["text"]
+                    break
+
+        # Final fallback: use first outline entry
+        if not title and outline:
+            title = outline[0]["text"]
 
         result = {
             "title": title,

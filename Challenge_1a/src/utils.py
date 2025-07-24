@@ -52,8 +52,6 @@ def is_likely_noise(text):
     if re.match(r"^\[\d+\]$", text):
         return True
 
-    
-
     # Reference noise
     if re.search(r'\bfigure\b|\btable\b|\breference\b|\bappendix\b', text_lower):
         return True
@@ -67,7 +65,13 @@ def is_likely_noise(text):
     # Too short and not clearly a heading
     if len(text.split()) <= 2 and not text.istitle() and not text.isupper():
         return True
-
+    
+    if(len(text) < 4):
+        return True
+    
+    if re.fullmatch(r"[A-Za-z]{2,}\d{1,3}", text):
+        return True
+    
     # ✅ Stopword-based check using preloaded global stopwords
     words = re.findall(r'\w+', text_lower)
     if words:
@@ -75,5 +79,5 @@ def is_likely_noise(text):
         if stop_count / len(words) > 0.8:
             return True
 
-    return False
+    return len(text.strip()) < 3 or any(token in text.lower() for token in ["page", "copyright", "www.", "http"])
     

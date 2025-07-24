@@ -198,11 +198,6 @@
     },
     {
       "level": "H2",
-      "text": "(B)",
-      "page": 9
-    },
-    {
-      "level": "H2",
       "text": "English Constituency Parsing",
       "page": 9
     },
@@ -243,11 +238,6 @@
     },
     {
       "level": "H2",
-      "text": "Recognition, pages 770–778, 2016.",
-      "page": 11
-    },
-    {
-      "level": "H2",
       "text": "Information Processing Systems, (NIPS), 2016.",
       "page": 11
     },
@@ -255,11 +245,6 @@
       "level": "H2",
       "text": "on Learning Representations (ICLR), 2016.",
       "page": 11
-    },
-    {
-      "level": "H2",
-      "text": "pages 152–159. ACL, June 2006.",
-      "page": 12
     },
     {
       "level": "H2",
@@ -275,16 +260,6 @@
       "level": "H1",
       "text": "Attention Visualizations",
       "page": 13
-    },
-    {
-      "level": "H2",
-      "text": "Law",
-      "page": 14
-    },
-    {
-      "level": "H2",
-      "text": "Law",
-      "page": 15
     }
   ]
 }
