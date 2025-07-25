@@ -24,19 +24,26 @@ class PDFProcessor:
         doc = fitz.open(pdf_path)
         lines = []
         largest_font_line = {"text": "", "size": 0.0, "page": 1, "is_bold": False, "is_centered": False}
+        
+        title = "" 
+        curr_font_size = 0.0
+        prev_y =  0.0 
 
         for page_num, page in enumerate(doc):
             blocks = page.get_text("dict")["blocks"]
             for b in blocks:
+                
                 if "lines" not in b:
                     continue
 
                 for l in b["lines"]:
+                   # print(l)
                     spans = l["spans"]
                     if not spans:
                         continue
 
                     spans.sort(key=lambda s: s["bbox"][0])
+                    
                     line_text = ""
                     prev_end = 0
                     fonts = []
@@ -49,8 +56,11 @@ class PDFProcessor:
                             if prev_end and x_start - prev_end > gap_threshold:
                                 line_text += " "
                             text = span["text"].strip()
+                            print(text,len(text),span["size"],span["bbox"])
+                            
                             if not text:
                                 continue
+                            
                             line_text += text
                             prev_end = span["bbox"][2]
                             fonts.append((span["size"], "Bold" in span["font"], span["font"]))
@@ -58,12 +68,23 @@ class PDFProcessor:
                     else:
                         for span in spans:
                             text = span["text"].strip()
+                            print(text,len(text),span["size"])
                             if not text:
                                 continue
                             line_text += text + " "
                             fonts.append((span["size"], "Bold" in span["font"], span["font"]))
                             word_count += len(text.split())
 
+                    if span["size"] > curr_font_size and page_num == 0 and not is_likely_noise(text):
+                                curr_font_size = span["size"]
+                                curr_font_size = span["size"]
+                                prev_y = span["bbox"][1]
+                                title = text
+                    if span["size"] == curr_font_size and abs(span["bbox"][1] - prev_y) < 8 and not is_likely_noise(text) and text != title:                             
+                                prev_y = span["bbox"][1]
+                                title += " " + text
+
+                  #  print(title)
                     clean_text = line_text.strip()
                     if not clean_text:
                         continue
@@ -91,7 +112,7 @@ class PDFProcessor:
 
                     pred = self.clf.predict(features)[0]
                     label = self.label_map.get(pred, "Unlabeled")
-
+                    
                     curr_res = {
                         "level": label,
                         "text": clean_text,
@@ -115,10 +136,13 @@ class PDFProcessor:
                             "is_centered": is_centered
                         }
 
-        title = ""
+        
         for item in lines:
-            if item["level"] == "TITLE" and item["page"] == 1:
-                title = item["text"]
+            if item["level"] == "TITLE" and item["text"].strip() != title.strip():
+                item["label"] = "H1"
+                break
+            if  item["text"].strip() == title.strip():
+                item["level"] = "Unlabeled"
                 break
 
         outline = [entry for entry in lines if entry["level"] != "TITLE" and entry["level"] != "Unlabeled"]

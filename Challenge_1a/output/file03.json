@@ -2,37 +2,22 @@
   "title": "Attention Is All You Need",
   "outline": [
     {
-      "level": "H1",
+      "level": "H2",
       "text": "Abstract",
       "page": 1
     },
     {
-      "level": "H1",
+      "level": "H2",
       "text": "Introduction",
       "page": 2
     },
     {
       "level": "H2",
-      "text": "architectures [38, 24, 15].",
-      "page": 2
-    },
-    {
-      "level": "H1",
       "text": "Background",
       "page": 2
     },
     {
       "level": "H2",
-      "text": "described in section 3.2.",
-      "page": 2
-    },
-    {
-      "level": "H2",
-      "text": "language modeling tasks [34].",
-      "page": 2
-    },
-    {
-      "level": "H1",
       "text": "Model Architecture",
       "page": 2
     },
@@ -42,12 +27,12 @@
       "page": 3
     },
     {
-      "level": "H2",
+      "level": "H3",
       "text": "Encoder:",
       "page": 3
     },
     {
-      "level": "H2",
+      "level": "H1",
       "text": "Decoder:",
       "page": 3
     },
@@ -55,11 +40,6 @@
       "level": "H2",
       "text": "Attention",
       "page": 3
-    },
-    {
-      "level": "H2",
-      "text": "matrix multiplication code.",
-      "page": 4
     },
     {
       "level": "H2",
@@ -73,41 +53,11 @@
     },
     {
       "level": "H2",
-      "text": "Layer Type",
-      "page": 6
-    },
-    {
-      "level": "H2",
-      "text": "Recurrent",
-      "page": 6
-    },
-    {
-      "level": "H2",
-      "text": "Convolutional",
-      "page": 6
-    },
-    {
-      "level": "H2",
       "text": "Positional Encoding",
       "page": 6
     },
     {
       "level": "H2",
-      "text": "learned and fixed [9].",
-      "page": 6
-    },
-    {
-      "level": "H2",
-      "text": "consider three desiderata.",
-      "page": 6
-    },
-    {
-      "level": "H2",
-      "text": "different layer types.",
-      "page": 6
-    },
-    {
-      "level": "H1",
       "text": "Training",
       "page": 7
     },
@@ -133,62 +83,17 @@
     },
     {
       "level": "H2",
-      "text": "Model",
-      "page": 8
-    },
-    {
-      "level": "H2",
-      "text": "Deep-Att + PosUnk [39]",
-      "page": 8
-    },
-    {
-      "level": "H2",
-      "text": "GNMT + RL [38]",
-      "page": 8
-    },
-    {
-      "level": "H2",
-      "text": "Deep-Att + PosUnk Ensemble [39]",
-      "page": 8
-    },
-    {
-      "level": "H2",
-      "text": "GNMT + RL Ensemble [38]",
-      "page": 8
-    },
-    {
-      "level": "H2",
-      "text": "ConvS2S Ensemble [9]",
-      "page": 8
-    },
-    {
-      "level": "H3",
-      "text": "Transformer (base model)",
-      "page": 8
-    },
-    {
-      "level": "H2",
-      "text": "Residual Dropout",
-      "page": 8
-    },
-    {
-      "level": "H2",
       "text": "Label Smoothing",
       "page": 8
     },
     {
-      "level": "H1",
+      "level": "H2",
       "text": "Results",
       "page": 8
     },
     {
       "level": "H2",
       "text": "Machine Translation",
-      "page": 8
-    },
-    {
-      "level": "H2",
-      "text": "the competitive models.",
       "page": 8
     },
     {
@@ -203,63 +108,43 @@
     },
     {
       "level": "H2",
-      "text": "for the semi-supervised setting.",
-      "page": 9
-    },
-    {
-      "level": "H2",
-      "text": "Recurrent Neural Network Grammar [8].",
-      "page": 10
-    },
-    {
-      "level": "H1",
       "text": "Conclusion",
       "page": 10
     },
     {
-      "level": "H2",
+      "level": "H3",
       "text": "Acknowledgements",
       "page": 10
     },
     {
       "level": "H2",
-      "text": "comments, corrections and inspiration.",
-      "page": 10
-    },
-    {
-      "level": "H1",
       "text": "References",
       "page": 10
     },
     {
       "level": "H2",
-      "text": "machine translation.CoRR, abs/1406.1078, 2014.",
+      "text": "[10]Alex Graves.",
       "page": 11
     },
     {
       "level": "H2",
-      "text": "Information Processing Systems, (NIPS), 2016.",
-      "page": 11
-    },
-    {
-      "level": "H2",
-      "text": "on Learning Representations (ICLR), 2016.",
-      "page": 11
-    },
-    {
-      "level": "H2",
-      "text": "Learning Research, 15(1):1929–1958, 2014.",
+      "text": "and Jeff Dean. Outrageously large neural networks: The sparsely-gated mixture-of-experts",
       "page": 12
     },
     {
       "level": "H2",
-      "text": "Inc., 2015.",
-      "page": 12
+      "text": "Attention Visualizations",
+      "page": 13
     },
     {
       "level": "H1",
-      "text": "Attention Visualizations",
-      "page": 13
+      "text": "<EOS>",
+      "page": 14
+    },
+    {
+      "level": "H1",
+      "text": "<EOS>",
+      "page": 15
     }
   ]
 }

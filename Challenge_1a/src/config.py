@@ -22,7 +22,7 @@ class Config:
 
     # Model and Labeling
     # Use the PROJECT_ROOT variable here
-    MODEL_PATH = os.path.join(PROJECT_ROOT ,"model","hackathon_model_old.joblib")
+    MODEL_PATH = os.path.join(PROJECT_ROOT ,"model","hackathon_model.joblib")
     LABEL_MAP = {
         np.int64(0): 'Unlabeled', # Body texts
         np.int64(1): 'H1',
@@ -50,12 +50,15 @@ class Config:
         Scans the input directory for all PDF files and returns a list of
         (input_file_path, output_file_path) tuples with .json extension.
         """
-        input_output_pairs = []
-        for file in os.listdir(Config.INPUT_DIR):
-            if file.lower().endswith(".pdf"):
-                input_path = os.path.join(Config.INPUT_DIR, file)
-                json_filename = os.path.splitext(file)[0] + ".json"
-                output_path = os.path.join(Config.OUTPUT_DIR, json_filename)
-                input_output_pairs.append((input_path, output_path))
-        return input_output_pairs
+        return [(os.path.join(Config.INPUT_DIR, "file06.pdf"),
+                 os.path.join(Config.OUTPUT_DIR, "file06.json"))]
+    
+        # input_output_pairs = []
+        # for file in os.listdir(Config.INPUT_DIR):
+        #     if file.lower().endswith(".pdf"):
+        #         input_path = os.path.join(Config.INPUT_DIR, file)
+        #         json_filename = os.path.splitext(file)[0] + ".json"
+        #         output_path = os.path.join(Config.OUTPUT_DIR, json_filename)
+        #         input_output_pairs.append((input_path, output_path))
+        # return input_output_pairs
 

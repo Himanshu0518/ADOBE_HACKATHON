@@ -17,28 +17,8 @@
       "page": 2
     },
     {
-      "level": "H2",
-      "text": "Version 2014",
-      "page": 2
-    },
-    {
       "level": "H1",
       "text": "Overview",
-      "page": 3
-    },
-    {
-      "level": "H2",
-      "text": "Version",
-      "page": 3
-    },
-    {
-      "level": "H2",
-      "text": "Date",
-      "page": 3
-    },
-    {
-      "level": "H2",
-      "text": "Version 2014",
       "page": 3
     },
     {
@@ -47,83 +27,8 @@
       "page": 4
     },
     {
-      "level": "H2",
-      "text": "Revision History",
-      "page": 4
-    },
-    {
-      "level": "H2",
-      "text": "Intended Audience",
-      "page": 4
-    },
-    {
-      "level": "H2",
-      "text": "Career Paths for Testers",
-      "page": 4
-    },
-    {
-      "level": "H2",
-      "text": "Learning Objectives",
-      "page": 4
-    },
-    {
-      "level": "H2",
-      "text": "Entry Requirements",
-      "page": 4
-    },
-    {
-      "level": "H2",
-      "text": "Structure and Course Duration",
-      "page": 4
-    },
-    {
-      "level": "H2",
-      "text": "Keeping It Current",
-      "page": 4
-    },
-    {
-      "level": "H2",
-      "text": "Business Outcomes",
-      "page": 4
-    },
-    {
-      "level": "H2",
-      "text": "Content",
-      "page": 4
-    },
-    {
-      "level": "H2",
-      "text": "References",
-      "page": 4
-    },
-    {
-      "level": "H2",
-      "text": "Trademarks",
-      "page": 4
-    },
-    {
-      "level": "H2",
-      "text": "Documents and Web Sites",
-      "page": 4
-    },
-    {
-      "level": "H2",
-      "text": "Version 2014",
-      "page": 4
-    },
-    {
       "level": "H1",
       "text": "Overview",
-      "page": 5
-    },
-    {
-      "level": "H2",
-      "text": "Foundation Level Working Group.",
-      "page": 5
-    },
-    {
-      "level": "H2",
-      "text": "Version 2014",
       "page": 5
     },
     {
@@ -132,28 +37,28 @@
       "page": 6
     },
     {
-      "level": "H2",
+      "level": "H3",
       "text": "Agile Tester",
       "page": 6
     },
     {
-      "level": "H2",
-      "text": "Version 2014",
-      "page": 6
-    },
-    {
       "level": "H1",
       "text": "Overview",
       "page": 7
     },
     {
       "level": "H2",
-      "text": "an Agile project.",
+      "text": "2.1 Intended Audience",
       "page": 7
     },
     {
       "level": "H2",
-      "text": "Version 2014",
+      "text": "2.2 Career Paths for Testers",
+      "page": 7
+    },
+    {
+      "level": "H2",
+      "text": "2.3 Learning Objectives",
       "page": 7
     },
     {
@@ -163,17 +68,12 @@
     },
     {
       "level": "H2",
-      "text": "Foundation Level syllabus.",
+      "text": "2.4 Entry Requirements",
       "page": 8
     },
     {
       "level": "H2",
-      "text": "Foundation Level.",
-      "page": 8
-    },
-    {
-      "level": "H2",
-      "text": "Version 2014",
+      "text": "2.5 Structure and Course Duration",
       "page": 8
     },
     {
@@ -183,7 +83,7 @@
     },
     {
       "level": "H2",
-      "text": "Version 2014",
+      "text": "2.6 Keeping It Current",
       "page": 9
     },
     {
@@ -192,8 +92,8 @@
       "page": 10
     },
     {
-      "level": "H3",
-      "text": "styles and channels.",
+      "level": "H2",
+      "text": "3.1 Business Outcomes",
       "page": 10
     },
     {
@@ -202,48 +102,13 @@
       "page": 10
     },
     {
-      "level": "H2",
+      "level": "H3",
       "text": "Manifesto.",
-      "page": 10
-    },
-    {
-      "level": "H2",
-      "text": "early and frequent feedback.",
-      "page": 10
-    },
-    {
-      "level": "H2",
-      "text": "improvement in Agile projects.",
-      "page": 10
-    },
-    {
-      "level": "H2",
-      "text": "Version 2014",
       "page": 10
     },
     {
       "level": "H1",
       "text": "Overview",
-      "page": 11
-    },
-    {
-      "level": "H2",
-      "text": "and non-Agile projects.",
-      "page": 11
-    },
-    {
-      "level": "H2",
-      "text": "driven development, and behavior-driven development.",
-      "page": 11
-    },
-    {
-      "level": "H2",
-      "text": "levels and testing types.",
-      "page": 11
-    },
-    {
-      "level": "H2",
-      "text": "Version 2014",
       "page": 11
     },
     {
@@ -258,12 +123,7 @@
     },
     {
       "level": "H2",
-      "text": "Identifier",
-      "page": 12
-    },
-    {
-      "level": "H2",
-      "text": "Version 2014",
+      "text": "4.2 Documents and Web Sites",
       "page": 12
     }
   ]
