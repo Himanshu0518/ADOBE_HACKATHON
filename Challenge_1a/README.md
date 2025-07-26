@@ -34,8 +34,8 @@ Our approach combines layout-aware PDF parsing using `PyMuPDF` with a lightweigh
 
 3. **ML-Based Heading Classification**:
 
-   * A lightweight trained classifier (e.g., Decision Tree or Random Forest) is used to predict heading levels (**H1**, **H2**, **H3**) based on extracted features.
-   * The model ensures consistency across PDFs of varying layout structures.
+   - A lightweight trained classifier (e.g., fine-tuned **XGBoost** model with **Optuna** for hyperparameter tuning) is used to predict heading levels — **H1**, **H2**, **H3** — based on extracted features .
+   - This model helps maintain consistency across PDFs with varying layout structures by learning the patterns.
 
 4. **Title Extraction**:
 
