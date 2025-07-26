@@ -76,11 +76,7 @@ docker build --platform linux/amd64 -t adobe-hackathon .
 ### 3. Run Docker Container
 
 ```bash
-docker run --rm \
-  -v $(pwd)/Challenge_1a/input:/app/input \
-  -v $(pwd)/Challenge_1a/output:/app/output \
-  --network none \
-  pdf-outline-extractor:latest
+docker run --rm -v ${PWD}/input:/app/input -v ${PWD}/output:/app/output --network none adobe-hackathon
 ```
 
 > 📁 `/Challenge_1a/input`: place your `.pdf` files here
@@ -155,37 +151,26 @@ For `document.pdf`, the tool generates `document.json`:
 
 ## 📊 Model Performance
 
-### 🔢 Confusion Matrix
 
-|    | Predicted H1 | Predicted H2 | Predicted H3 |
-| -- | ------------ | ------------ | ------------ |
-| H1 | 48           | 3            | 1            |
-| H2 | 4            | 52           | 5            |
-| H3 | 1            | 4            | 40           |
+### 📊 Classification Report
+
+| Label   | Precision | Recall | F1-Score | Support |
+|:--------|----------:|-------:|---------:|--------:|
+| body    |     0.97  |  0.91  |    0.94  |      32 |
+| H1      |     0.88  |  0.97  |    0.92  |      30 |
+| H2      |     0.89  |  0.84  |    0.86  |      19 |
+| H3      |     0.67  |  0.67  |    0.67  |       9 |
+| title   |     0.80  |  0.80  |    0.80  |       5 |
+|         |           |        |          |         |
+| **Accuracy**     |        |        |  **0.88** |      95 |
+| **Macro Avg**    |     0.84  |  0.84  |    0.84  |      95 |
+| **Weighted Avg** |     0.89  |  0.88  |    0.88  |      95 |
+
 
 ### 📈 Learning Curve
 
-A learning curve was plotted to evaluate model generalization over increasing training samples. The performance plateaued after \~80 PDFs, suggesting sufficient training data.
+![Learning Curve](https://github.com/Himanshu0518/Assets/raw/main/learning_curve.png)
 
-* **Heading Classification Accuracy**:
-
-  * H1: 95.2%  | H2: 91.3%  | H3: 88.7%
-  * Overall F1-Score: 91.7%
-
-* **Processing Time**: Avg. 4.8 seconds for 50-page PDFs
-
-* **Model Size**: 1.7 MB (`heading_classifier.joblib`)
-
-* **Heading Classification Accuracy**:
-
-  * H1: 95.2%  | H2: 91.3%  | H3: 88.7%
-  * Overall F1-Score: 91.7%
-
-* **Processing Time**: Avg. 4.8 seconds for 50-page PDFs
-
-* **Model Size**: 1.7 MB (`heading_classifier.joblib`)
-
----
 
 ## 📁 Dataset Used
 
@@ -194,22 +179,6 @@ A learning curve was plotted to evaluate model generalization over increasing tr
 * Labeled manually for heading levels (H1, H2, H3)
 * Not publicly released due to copyright sensitivity
 
----
-
-## 🧪 Testing & Evaluation
-
-* Evaluated on 30+ PDFs of varying formats:
-
-  * Simple, clean academic PDFs
-  * Multicolumn business reports
-  * PDFs with inconsistent font hierarchies
-* Edge cases tested:
-
-  * PDFs with no headings (fails gracefully)
-  * Headings with no numbering (detected by spacing & font)
-  * Nested headings (handled via ML clustering)
-
----
 
 ## 📝 Known Limitations
 

@@ -1,130 +1,380 @@
 {
-  "title": "Foundation Level Extensions",
+  "title": "Attention Is All You Need",
   "outline": [
     {
-      "level": "H1",
-      "text": "Overview",
+      "level": "H2",
+      "text": "reproduce the tables and figures in this paper solely for use in journalistic or",
       "page": 1
     },
     {
       "level": "H1",
-      "text": "Version 1.0",
+      "text": "scholarly works.",
       "page": 1
     },
     {
       "level": "H1",
-      "text": "Overview",
+      "text": "Abstract",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "our research.",
+      "page": 1
+    },
+    {
+      "level": "H1",
+      "text": "Introduction",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "architectures [38, 24, 15].",
       "page": 2
     },
     {
       "level": "H1",
-      "text": "Overview",
-      "page": 3
+      "text": "Background",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "described in section 3.2.",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "language modeling tasks [34].",
+      "page": 2
     },
     {
       "level": "H1",
-      "text": "Overview",
+      "text": "Model Architecture",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "respectively.",
+      "page": 3
+    },
+    {
+      "level": "H2",
+      "text": "Encoder and Decoder Stacks",
+      "page": 3
+    },
+    {
+      "level": "H2",
+      "text": "Encoder:",
+      "page": 3
+    },
+    {
+      "level": "H2",
+      "text": "Decoder:",
+      "page": 3
+    },
+    {
+      "level": "H2",
+      "text": "Attention",
+      "page": 3
+    },
+    {
+      "level": "H2",
+      "text": "values.",
       "page": 4
     },
     {
       "level": "H1",
-      "text": "Overview",
+      "text": "√dk",
+      "page": 4
+    },
+    {
+      "level": "H2",
+      "text": "matrix multiplication code.",
+      "page": 4
+    },
+    {
+      "level": "H2",
+      "text": "depicted in Figure 2.",
       "page": 5
     },
     {
-      "level": "H1",
-      "text": "Overview",
+      "level": "H2",
+      "text": "encoder.",
+      "page": 5
+    },
+    {
+      "level": "H2",
+      "text": "Position-wise Feed-Forward Networks",
+      "page": 5
+    },
+    {
+      "level": "H2",
+      "text": "Embeddings and Softmax",
+      "page": 5
+    },
+    {
+      "level": "H2",
+      "text": "Layer Type",
       "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "Recurrent",
+      "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "Convolutional",
+      "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "Positional Encoding",
+      "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "learned and fixed [9].",
+      "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "during training.",
+      "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "consider three desiderata.",
+      "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "different layer types.",
+      "page": 6
+    },
+    {
+      "level": "H1",
+      "text": "Training",
+      "page": 7
+    },
+    {
+      "level": "H2",
+      "text": "Training Data and Batching",
+      "page": 7
+    },
+    {
+      "level": "H2",
+      "text": "target tokens.",
+      "page": 7
+    },
+    {
+      "level": "H2",
+      "text": "Hardware and Schedule",
+      "page": 7
+    },
+    {
+      "level": "H2",
+      "text": "Optimizer",
+      "page": 7
+    },
+    {
+      "level": "H2",
+      "text": "Regularization",
+      "page": 7
+    },
+    {
+      "level": "H2",
+      "text": "Model",
+      "page": 8
+    },
+    {
+      "level": "H2",
+      "text": "ByteNet [18]",
+      "page": 8
+    },
+    {
+      "level": "H2",
+      "text": "Deep-Att + PosUnk [39]",
+      "page": 8
+    },
+    {
+      "level": "H2",
+      "text": "GNMT + RL [38]",
+      "page": 8
+    },
+    {
+      "level": "H2",
+      "text": "ConvS2S [9]",
+      "page": 8
+    },
+    {
+      "level": "H2",
+      "text": "MoE [32]",
+      "page": 8
+    },
+    {
+      "level": "H2",
+      "text": "Deep-Att + PosUnk Ensemble [39]",
+      "page": 8
+    },
+    {
+      "level": "H2",
+      "text": "GNMT + RL Ensemble [38]",
+      "page": 8
+    },
+    {
+      "level": "H2",
+      "text": "ConvS2S Ensemble [9]",
+      "page": 8
     },
     {
       "level": "H3",
-      "text": "Agile Tester",
-      "page": 6
-    },
-    {
-      "level": "H1",
-      "text": "Overview",
-      "page": 7
-    },
-    {
-      "level": "H2",
-      "text": "2.1 Intended Audience",
-      "page": 7
-    },
-    {
-      "level": "H2",
-      "text": "2.2 Career Paths for Testers",
-      "page": 7
-    },
-    {
-      "level": "H2",
-      "text": "2.3 Learning Objectives",
-      "page": 7
-    },
-    {
-      "level": "H1",
-      "text": "Overview",
+      "text": "Transformer (base model)",
       "page": 8
     },
     {
       "level": "H2",
-      "text": "2.4 Entry Requirements",
+      "text": "Transformer (big)",
       "page": 8
     },
     {
       "level": "H2",
-      "text": "2.5 Structure and Course Duration",
+      "text": "Residual Dropout",
+      "page": 8
+    },
+    {
+      "level": "H2",
+      "text": "Label Smoothing",
       "page": 8
     },
     {
       "level": "H1",
-      "text": "Overview",
+      "text": "Results",
+      "page": 8
+    },
+    {
+      "level": "H2",
+      "text": "Machine Translation",
+      "page": 8
+    },
+    {
+      "level": "H2",
+      "text": "the competitive models.",
+      "page": 8
+    },
+    {
+      "level": "H2",
+      "text": "Model Variations",
+      "page": 8
+    },
+    {
+      "level": "H2",
+      "text": "per-word perplexities.",
       "page": 9
     },
     {
       "level": "H2",
-      "text": "2.6 Keeping It Current",
+      "text": "base",
       "page": 9
     },
     {
-      "level": "H1",
-      "text": "Overview",
+      "level": "H2",
+      "text": "big",
+      "page": 9
+    },
+    {
+      "level": "H2",
+      "text": "English Constituency Parsing",
+      "page": 9
+    },
+    {
+      "level": "H2",
+      "text": "for the semi-supervised setting.",
+      "page": 9
+    },
+    {
+      "level": "H2",
+      "text": "of WSJ)",
       "page": 10
     },
     {
       "level": "H2",
-      "text": "3.1 Business Outcomes",
-      "page": 10
-    },
-    {
-      "level": "H2",
-      "text": "3.2 Content",
-      "page": 10
-    },
-    {
-      "level": "H3",
-      "text": "Manifesto.",
+      "text": "Recurrent Neural Network Grammar [8].",
       "page": 10
     },
     {
       "level": "H1",
-      "text": "Overview",
+      "text": "Conclusion",
+      "page": 10
+    },
+    {
+      "level": "H2",
+      "text": "multi-headed self-attention.",
+      "page": 10
+    },
+    {
+      "level": "H2",
+      "text": "tensorflow/tensor2tensor.",
+      "page": 10
+    },
+    {
+      "level": "H2",
+      "text": "Acknowledgements",
+      "page": 10
+    },
+    {
+      "level": "H2",
+      "text": "comments, corrections and inspiration.",
+      "page": 10
+    },
+    {
+      "level": "H1",
+      "text": "References",
+      "page": 10
+    },
+    {
+      "level": "H2",
+      "text": "machine translation architectures.CoRR, abs/1703.03906, 2017.",
+      "page": 10
+    },
+    {
+      "level": "H2",
+      "text": "machine translation.CoRR, abs/1406.1078, 2014.",
       "page": 11
     },
     {
+      "level": "H2",
+      "text": "Information Processing Systems, (NIPS), 2016.",
+      "page": 11
+    },
+    {
+      "level": "H2",
+      "text": "on Learning Representations (ICLR), 2016.",
+      "page": 11
+    },
+    {
+      "level": "H2",
+      "text": "Learning Research, 15(1):1929–1958, 2014.",
+      "page": 12
+    },
+    {
+      "level": "H2",
+      "text": "Inc., 2015.",
+      "page": 12
+    },
+    {
       "level": "H1",
-      "text": "Overview",
-      "page": 12
+      "text": "Attention Visualizations",
+      "page": 13
     },
     {
       "level": "H2",
-      "text": "4.1 Trademarks",
-      "page": 12
+      "text": "Law",
+      "page": 14
     },
     {
       "level": "H2",
-      "text": "4.2 Documents and Web Sites",
-      "page": 12
+      "text": "Law",
+      "page": 15
     }
   ]
 }

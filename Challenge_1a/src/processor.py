@@ -1,5 +1,3 @@
-# src/processor.py
-
 import fitz
 import joblib
 import os
@@ -31,13 +29,14 @@ class PDFProcessor:
 
         for page_num, page in enumerate(doc):
             blocks = page.get_text("dict")["blocks"]
+            y_max = page.rect.height
             for b in blocks:
                 
                 if "lines" not in b:
                     continue
 
                 for l in b["lines"]:
-                   # print(l)
+
                     spans = l["spans"]
                     if not spans:
                         continue
@@ -56,8 +55,20 @@ class PDFProcessor:
                             if prev_end and x_start - prev_end > gap_threshold:
                                 line_text += " "
                             text = span["text"].strip()
-                            print(text,len(text),span["size"],span["bbox"])
                             
+                            
+
+                            if span["size"] > curr_font_size and page_num == 0  and span["bbox"][1] < y_max * 0.2:
+                                curr_font_size = span["size"]
+                                curr_font_size = span["size"]
+                                prev_y = span["bbox"][1]
+                                title = text
+                              
+                              
+                            elif span["size"] == curr_font_size and abs(span["bbox"][1] - prev_y) < 5  and text != title and page_num == 0 and  span["bbox"][1] < y_max * 0.2:                             
+                                prev_y = span["bbox"][1]
+                                title += " " + text
+
                             if not text:
                                 continue
                             
@@ -68,23 +79,29 @@ class PDFProcessor:
                     else:
                         for span in spans:
                             text = span["text"].strip()
-                            print(text,len(text),span["size"])
+                         
+                         
+                            if span["size"] > curr_font_size and page_num == 0  and  span["bbox"][1] < y_max * 0.3:
+                                curr_font_size = span["size"]
+                                curr_font_size = span["size"]
+                                prev_y = span["bbox"][1]
+                                title = text
+                            
+                            
+                            elif span["size"] == curr_font_size and abs(span["bbox"][1] - prev_y) < 5 and text != title and page_num == 0  and  span["bbox"][1] < y_max * 0.:                             
+                                prev_y = span["bbox"][1]
+                                title += " " + text
+
                             if not text:
                                 continue
                             line_text += text + " "
                             fonts.append((span["size"], "Bold" in span["font"], span["font"]))
                             word_count += len(text.split())
 
-                    if span["size"] > curr_font_size and page_num == 0 and not is_likely_noise(text):
-                                curr_font_size = span["size"]
-                                curr_font_size = span["size"]
-                                prev_y = span["bbox"][1]
-                                title = text
-                    if span["size"] == curr_font_size and abs(span["bbox"][1] - prev_y) < 8 and not is_likely_noise(text) and text != title:                             
-                                prev_y = span["bbox"][1]
-                                title += " " + text
 
-                  #  print(title)
+
+                 
+                 
                     clean_text = line_text.strip()
                     if not clean_text:
                         continue
