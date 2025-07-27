@@ -1,0 +1,88 @@
+{
+  "metadata": {
+    "input_documents": [
+      "Dinner Ideas - Sides_1.pdf",
+      "Dinner Ideas - Mains_1.pdf",
+      "Dinner Ideas - Sides_4.pdf",
+      "Breakfast Ideas.pdf",
+      "Dinner Ideas - Sides_2.pdf",
+      "Dinner Ideas - Mains_3.pdf",
+      "Dinner Ideas - Sides_3.pdf",
+      "Dinner Ideas - Mains_2.pdf",
+      "Lunch Ideas.pdf"
+    ],
+    "persona": "Food Contractor",
+    "job_to_be_done": "Prepare a vegetarian buffet-style dinner menu for a corporate gathering, including gluten-free items.",
+    "timestamp": "2025-07-27 14:45:23"
+  },
+  "extracted_sections": [
+    {
+      "document": "Dinner Ideas - Mains_1.pdf",
+      "section_title": "12 cup flour 14 cup olive",
+      "importance_rank": 1,
+      "page_number": 2
+    },
+    {
+      "document": "Breakfast Ideas.pdf",
+      "section_title": "Add oats and salt reduce heat",
+      "importance_rank": 2,
+      "page_number": 4
+    },
+    {
+      "document": "Lunch Ideas.pdf",
+      "section_title": "Salt and pepper to taste instructions",
+      "importance_rank": 3,
+      "page_number": 11
+    },
+    {
+      "document": "Breakfast Ideas.pdf",
+      "section_title": "To taste optional toppings cherry tomatoes",
+      "importance_rank": 4,
+      "page_number": 3
+    },
+    {
+      "document": "Dinner Ideas - Mains_1.pdf",
+      "section_title": "Sour cream and salsa for toppings",
+      "importance_rank": 5,
+      "page_number": 5
+    },
+    {
+      "document": "Dinner Ideas - Mains_3.pdf",
+      "section_title": "1 small onion sliced 2 cloves",
+      "importance_rank": 6,
+      "page_number": 10
+    }
+  ],
+  "subsection_analysis": [
+    {
+      "document": "Dinner Ideas - Mains_1.pdf",
+      "refined_text": "\u2022 1/2 cup flour \u2022 1/4 cup olive oil \u2022 Salt and pepper to taste Instructions: \u2022 Preheat oven to 375\u00b0F (190\u00b0C). \u2022 Season chicken breasts with salt and pepper. \u2022 Dredge chicken in flour, dip in beaten eggs, and coat with a mixture of breadcrumbs and grated Parmesan cheese. \u2022 Heat olive oil in a skillet over medium heat. \u2022 Cook chicken until golden brown on both sides. \u2022 Place chicken in a baking dish, top with marinara ...",
+      "page_number": 2
+    },
+    {
+      "document": "Breakfast Ideas.pdf",
+      "refined_text": "\u2022 \u2022 Add oats and salt, reduce heat to low, and simmer for 5 minutes, stirring occasionally. \u2022 Remove from heat and let sit for a few minutes. \u2022 Serve with your favorite toppings. Yogurt Parfait Ingredients: 1 cup Greek yogurt \u2022 1/2 cup granola \u2022 1/2 cup fresh berries \u2022 \u2022 Honey for drizzling Instructions: In a glass or bowl, layer Greek yogurt, granola, and fresh berries. \u2022 \u2022 Drizzle with honey. \u2022 Repeat layers if des...",
+      "page_number": 4
+    },
+    {
+      "document": "Lunch Ideas.pdf",
+      "refined_text": "\u2022 \u2022 Salt and pepper to taste Instructions: In a bowl, combine the tuna, avocado, tomatoes, and red onion. \u2022 \u2022 Drizzle with olive oil and lemon juice. \u2022 Season with salt and pepper, then toss to combine. Veggie Sushi Rolls Ingredients: 1 cup cooked sushi rice \u2022 1/2 cucumber, julienned \u2022 1/2 avocado, sliced \u2022 1/4 cup carrot, julienned \u2022 \u2022 2 sheets nori (seaweed) \u2022 Soy sauce for dipping Instructions: \u2022 Lay a sheet of no...",
+      "page_number": 11
+    },
+    {
+      "document": "Breakfast Ideas.pdf",
+      "refined_text": "to taste \u2022 Optional toppings: cherry tomatoes, red pepper flakes, poached egg Instructions: \u2022 Toast the bread slices. \u2022 Mash the avocado in a bowl and season with salt and pepper. \u2022 Spread the mashed avocado on the toast. \u2022 Add optional toppings if desired. Breakfast Burrito Ingredients: \u2022 2 large eggs \u2022 1/4 cup shredded cheese 1/4 cup cooked sausage or bacon 1/4 cup diced bell pepper 1/4 cup diced onion 1 large flou...",
+      "page_number": 3
+    },
+    {
+      "document": "Dinner Ideas - Mains_1.pdf",
+      "refined_text": "sour cream, and salsa for toppings Instructions: In a skillet, cook ground beef over medium heat until browned. \u2022 \u2022 Add diced onion and minced garlic, saut\u00e9 until softened. \u2022 Stir in taco seasoning and water, simmer until thickened. \u2022 Serve beef mixture in taco shells or tortillas with desired toppings. Lasagna Ingredients: \u2022 1 pound ground beef \u2022 1 small onion, diced \u2022 2 cloves garlic, minced \u2022 1 jar (24 ounces) mar...",
+      "page_number": 5
+    },
+    {
+      "document": "Dinner Ideas - Mains_3.pdf",
+      "refined_text": "\u2022 1 small onion, sliced \u2022 2 cloves garlic, minced \u2022 1 cup barbecue sauce \u2022 1/2 cup chicken broth \u2022 1 tablespoon brown sugar \u2022 1 teaspoon smoked paprika \u2022 Salt and pepper to taste \u2022 Buns for serving \u2022 Coleslaw for topping (optional) Instructions: \u2022 Season pork shoulder with salt, pepper, and smoked paprika. \u2022 Place onion and garlic in a slow cooker, then add pork. \u2022 Mix barbecue sauce, chicken broth, and brown sugar, ...",
+      "page_number": 10
+    }
+  ]
+}
