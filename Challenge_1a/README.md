@@ -62,7 +62,7 @@ Our approach combines layout-aware PDF parsing using `PyMuPDF` with a lightweigh
 ### 1. Clone the Repository
 
 ```bash
-git https://github.com/Himanshu0518/ADOBE_HACKATHON.git
+git clone https://github.com/Himanshu0518/ADOBE_HACKATHON.git
 cd ADOBE_HACKATHON
 cd Challenge_1a 
 ```
