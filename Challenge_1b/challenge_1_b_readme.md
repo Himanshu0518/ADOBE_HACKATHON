@@ -133,8 +133,8 @@ python main.py
 ### Option 2: Docker
 
 ```bash
-docker build -t pdf-analyzer .
-docker run --rm -v $(pwd):/app pdf-analyzer
+docker build -t persona-doc-intel .
+docker run --rm -v ${PWD}:/app persona-doc-intel
 ```
 
 ---
